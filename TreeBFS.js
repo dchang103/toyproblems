@@ -40,16 +40,3 @@
 // }
 
 // Output: 'j f k i a h z d'
-
-const bfs = (root, target) => {
-  var queue = []
-  
-  const bfTraverse = (node, target) => {
-    if (node.value === target) { return node }
-
-    node.childNodes.forEach((child) => { queue.push(child) })
-    node.childNodes.forEach((child) => { return bfTraverse(child, target) })
-  }
-
-  return bfTraverse(root, target)
-}
