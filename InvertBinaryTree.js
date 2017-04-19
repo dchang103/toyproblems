@@ -12,16 +12,3 @@
 //       7     2
 //      / \   / \
 //     9   6 3   1
-
-const binaryReverse = (root) => {
-  
-  const flipNode = (node) => {
-    if (node.left) { flipNode(node.left) }
-    if (node.right) { flipNode(node.right) }
-    let temp = node.left
-    node.left = node.right
-    node.right = temp
-  }
-
-  flipNode(root)
-}
